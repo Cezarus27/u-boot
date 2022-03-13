@@ -2,6 +2,10 @@
 
 #define CONFIG_SYS_CACHELINE_SIZE	64
 
+#ifdef CONFIG_RISCV
+#define CONFIG_SYS_BOOTM_LEN		(32 << 20)
+#endif
+
 /* FIXME: Need a real clock driver! */
 #define CONFIG_SYS_NS16550_CLK		24000000
 #define CONFIG_SYS_TCLK			24000000
